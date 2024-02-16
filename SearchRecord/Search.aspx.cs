@@ -19,13 +19,13 @@ namespace SearchRecord
         protected void btnsearch_Click(object sender, EventArgs e)
         {
             s.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Box where Movie_ID='" + txtid.Text + "'", s);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Box where Movie_Name='" + txtid.Text + "'", s);
 
             SqlDataReader dr = cmd.ExecuteReader();
 
             if(dr.Read()) 
             {
-                lblname.Text = dr["Movie_Name"].ToString();
+                lblid.Text = dr["Movie_Id"].ToString();
                 lbldirector.Text = dr["Movie_Director"].ToString();
                 lbldir.Text = dr["Movie_description"].ToString();
             }
