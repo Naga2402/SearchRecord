@@ -31,7 +31,7 @@ namespace SearchRecord
             }
             else
             {
-                lblMessage.Text = "Record Not Found;
+                lblMessage.Text = "Record Not Found";
             }
         }
     }
